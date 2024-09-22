@@ -27,15 +27,14 @@ function decodeBase64Url(base64Url: string) {
 
 export default {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-		// the path looks like /image/<payload>/og.png
-		const payload = request.url.split("/")[4];
+		const url = new URL(request.url);
 
-		if (!payload) {
-			return new Response("Missing payload", { status: 400 });
+		const title = url.searchParams.get("title");
+
+		if (!title) {
+			return new Response("Missing title", { status: 400 });
 		}
 
-		const decodedBase64 = decodeBase64Url(payload);
-		const title = decodedBase64;
 		const domain = "kristianfreeman.com";
 		return new ImageResponse(template(title, domain), {
 			format: "png",

@@ -3,30 +3,30 @@ import React from 'react';
 export default (text: string, domain: string) => (
 	<div
 		style={{
-			width: '1200px',
-			height: '627px',
-			padding: '20px',
+			alignItems: 'center',
+			background: 'black',
+			borderRadius: '10px',
+			boxShadow: '0 0 10px rgba(255, 255, 255, 0.1)',
+			color: 'white',
 			display: 'flex',
 			flexDirection: 'column',
-			alignItems: 'center',
-			justifyContent: 'flex-start',
-			background: 'black',
-			color: 'white',
+			fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif',
 			fontSize: '32px',
 			fontWeight: '600',
-			textAlign: 'center',
-			boxShadow: '0 0 10px rgba(255, 255, 255, 0.1)',
-			borderRadius: '10px',
+			height: '627px',
+			justifyContent: 'flex-start',
+			padding: '20px',
 			position: 'relative',
-			fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif',
+			textAlign: 'center',
+			width: '1200px',
 		}}
 	>
 		<div
 			style={{
 				display: 'flex',
 				flexDirection: 'column',
-				justifyContent: 'center',
 				flexGrow: 1,
+				justifyContent: 'center',
 			}}
 		>
 			<h1
@@ -43,11 +43,11 @@ export default (text: string, domain: string) => (
 		</div>
 		<p
 			style={{
+				bottom: '20px',
+				color: '#ccc',
 				fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif',
 				fontSize: '24px',
-				color: '#ccc',
 				position: 'absolute',
-				bottom: '20px',
 			}}
 		>
 			{domain}

@@ -35,8 +35,8 @@ export default {
 		}
 
 		const decodedBase64 = decodeBase64Url(payload);
-		const decoded = JSON.parse(decodedBase64);
-		const { title, domain = "kristianfreeman.com" } = decoded;
+		const title = decodedBase64;
+		const domain = "kristianfreeman.com";
 		return new ImageResponse(template(title, domain), {
 			format: "png",
 			width: 1200,

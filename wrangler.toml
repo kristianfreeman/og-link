@@ -5,5 +5,5 @@ compatibility_date = "2023-06-28"
 workers_dev = true
 
 routes = [
-	{ pattern = "kristianfreeman.com/image/*", zone_name = "kristianfreeman.com" }
+	{ pattern = "og.kristianfreeman.com/*", zone_name = "kristianfreeman.com" }
 ]
